@@ -1,0 +1,47 @@
+
+.header{
+	background-color: #edb1b1;
+	font-family: inherit;
+	height: 100px;
+
+}
+.footer{
+	background-color: #edb1b1;
+	font-family: inherit;
+	height: 100px;
+}
+.title{
+	padding-top: 20px;
+}
+
+
+.index{
+	background-color: white;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+html, body {
+    height: 100%;
+}
+
+/*.wrapper {
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+}*/
+
+.nav{
+	padding-left: 500px;
+	background-color: #edb1b1;
+}
+
+.first{
+	margin: 10px;
+}
+.second{
+	margin: 10px;
+}
+.second{
+	margin: 10px;
+}
+

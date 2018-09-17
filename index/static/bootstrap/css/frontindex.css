@@ -1,0 +1,112 @@
+body{
+	background-color: silver;
+}
+
+
+#wrapper{
+	margin: auto;
+	overflow:hidden;
+	border-radius: 0.5;
+	margin: 50px;
+	border-radius: 35px;
+
+}
+
+
+h1{
+	
+	padding-top: 20px;
+	color:#0099FF;
+}
+
+h4{
+	font-style: bold;
+	color:white;
+	margin-top:-20px;
+}
+.navbar{
+	/*background-image: url("../img/image2.png"); */
+	background-color: #663300;
+	
+	overflow: hidden;
+	
+
+}
+
+.navbar ul{
+	
+	float:right;
+	font-size: 1.20em;
+}
+
+.navbar ul li{
+	display: inline;
+	padding: 40px;
+	text-decoration: none;
+
+	}
+
+
+.navbar ul li a{
+	color:red;
+	text-decoration: none;
+
+	}
+
+.navbar ul li a:hover{
+	color:yellow;
+
+}
+
+.navbar ul li a:active{
+	color:green;
+
+}
+
+#content{
+/*background-image: url("../img/image2.png"); 	*/
+background-color: #66FFCC;
+background-size: cover;
+	
+}
+
+
+#footer{
+	position: relative;
+	/*background-image: url("../img/image2.png"); */
+	background-color: #660033;
+	margin-top: 20px;
+	color:white;
+	text-align: center;
+	padding-top: 10px;
+	overflow: hidden;
+
+}
+
+.img4{
+	margin-top: 30px;
+	margin-left: 30px;
+	position: center;
+}
+
+#register{
+	color:darkblue;
+	text-align: center;
+	font-style: bold;
+	padding-top: 5px;
+}
+
+#register_form{
+	text-align: center;
+	padding-top: 10px;
+
+}
+.form{
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#submitbtn {
+	color:blue;
+	margin:20px;
+}
