@@ -21,19 +21,20 @@ body{
 	<!-- start header -->
 	
 	<div class="col-md-12 header">
-		<div class="col-md-4">
-			<img class="img-circle img-responsive" src="{% static 'images/heart.jpg' %}" width="120px" height="120px" >
+		<div class="col-md-3">
+			<a href="{% url 'index:index' %}"><img class="img-responsive" src="{% static 'images/logo2.png' %}" width="120px" height="120px" ></a>
 		</div>
-		<div class="col-md-8 title">
-			<h1>Heart Disease Prediction system</h1>						
+		<div class="col-md-9 title">
+			<a href="{% url 'index:index' %}"><img class="img-responsive" src="{% static 'images/header1.png' %}" ></a>						
 		</div>
 	</div>
 	<div class="col-md-12 ">
 		<nav class="navbar navbar-default">
   		<div class="container-fluid">
     	<ul class="nav navbar-nav">
-      	<li><a href="{% url 'index:index' %}"">Home</a></li>
+      	<li><a href="{% url 'index:index' %}">Home</a></li>
       	<li><a href="{% url 'index:model_info' %}">Model Info</a></li>
+      	<li><a href="{% url 'index:model_info' %}">Data Info</a></li>
       	<li><a href="#">About Us</a></li>
     	</ul>
   </div>
@@ -48,20 +49,21 @@ body{
 </div>
 	<!-- start footer -->
 
-
-	<div class="col-md-12 footer">
-		<div class="col-md-4"></div>
-		<div class="col-md-4" >
-			<div align="center"><b>Prepared by</b><br>
-				Prajwol,Prakash,Karna & Aishwarya<br>
-			<h4>Under supervision of Dadhi Ram Ghimire</h4>
-			<h4>Patan Multiple Campus</h4>
+<div class="row">
+	<div class="col-md-12 col-xs-12 footer">
+			<div class="col-md-4"></div>
+		<div class="col-md-4 col-xs-4 footer-info" align="center">
+			<b class="prepare">Prepared by</b><br>
+			<div class="name">Prajwol,Prakash,Karna & Aishwarya</div>
+			<h5 class="sir">Under supervision of Dadhi Ram Ghimire</h5>
+			<h6 class="campus">Patan Multiple Campus</h6>
 		</div>
-	</div>
-		<div class="col-md-4">
+		<div class="col-md-4 col-xs-4">
 			
 			
 		</div>
+		</div>
+		
 	</div>
 
 </body>

@@ -1,15 +1,18 @@
 
 .header{
-	background-color: #edb1b1;
+	background-color: #9c0606;
 	font-family: inherit;
-	height: 100px;
+	height: 80px;
 
 }
 .footer{
-	background-color: #edb1b1;
+	background-color: #9c0606;
 	font-family: inherit;
-	height: 100px;
-}
+	height: 90px;
+	 position: absolute;
+ 	 bottom: 0;
+	  padding: 1rem;
+  }
 .title{
 	padding-top: 20px;
 }
@@ -20,9 +23,7 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-html, body {
-    height: 100%;
-}
+
 
 /*.wrapper {
     min-height: 100%;
@@ -37,11 +38,56 @@ html, body {
 
 .first{
 	margin: 10px;
+	height: 330px;
 }
 .second{
 	margin: 10px;
+	height: 360px;
 }
-.second{
+.third{
 	margin: 10px;
+	height: 360px;
 }
+
+div .first, .second, .third, .form, .graph {
+
+border-top-right-radius:15px;
+border-top-left-radius:15px;
+border-bottom-right-radius:15px;
+border-bottom-left-radius:15px;
+background-color: rgba(232, 221, 221, 0.5);
+}
+.cmatrix, .result{
+border-top-right-radius:15px;
+border-top-left-radius:15px;
+border-bottom-right-radius:15px;
+border-bottom-left-radius:15px;
+}
+.prepare{
+	font-family:-webkit-body;
+	color: white;
+	margin-top: 0;
+	padding-top: 0;
+}
+.name{
+	font-family:-webkit-body;
+	color: white;
+	margin-top: 0;
+
+}
+.sir{
+	font-family:-webkit-body;
+	font-weight: 500;
+	font-size: 18;
+	color: white;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.campus{
+	font-family:-webkit-body;
+	margin-top: 0;
+	font-size: 16;
+	color:white;
+}
+
 

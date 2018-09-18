@@ -1,7 +1,7 @@
 {% extends "index/header.html"%}
 
 {% block content%}
-<div class="index col-md-8 col-lg-offset-2"">
+<div class="index col-md-8 col-lg-offset-2 form">
 	<form method="Post" action="{% url 'index:result' %}">
 		{% csrf_token %}<br>
 		{{ form.as_p }}<br>

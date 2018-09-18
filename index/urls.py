@@ -9,4 +9,5 @@ urlpatterns = [
     path('form',views.form,name='form'),
     path('result',views.main,name='result'),
     path('model_info',views.model_info,name='model_info'),
+    path('about_us',views.about_us,name='About Us'),
 ]

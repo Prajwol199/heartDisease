@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.contrib.staticfiles.templatetags.staticfiles import static
 from .forms import ContactForm
 
 import csv
@@ -10,12 +10,12 @@ import random
 
 
 def index(request):
-    return render(request,'index/index.html',{'title':'home'})
+    return render(request,'index/index.html',{'title':'Heart Disease Prediction System'})
 
 def form(request): 
     
     form= ContactForm()
-    return render(request,'index/form.html',{'form':form,'title':'form'})
+    return render(request,'index/form.html',{'form':form,'title':'Disease Prediction Form'})
 
 # <-----------------------------START_CLASSIFIER----------------------------------->
 
@@ -132,9 +132,9 @@ def main(request):
 
             splitRatio = 0.67
             inputVector = [age,sex,cpp,trestbps,chol,fbs,restecgg,thalach,exang,oldpeak,slopee,ca,thall]
-            trainingSet=loadCsv('C:/Users/DIPAK/Desktop/heartDisease1/index/static/train.csv')
-            testSet=loadCsv('C:/Users/DIPAK/Desktop/heartDisease1/index/static/test.csv')
-            print('Split {0} rows into train={1} and test={2} rows'.format(len(trainingSet+testSet), len(trainingSet), len(testSet)))
+            trainingSet=loadCsv('C:/Users/Caran/Desktop/heartDisease/index/static/train.csv')
+            testSet=loadCsv('C:/Users/Caran/Desktop/heartDisease/index/static/test.csv')
+            # print('Split {0} rows into train={1} and test={2} rows'.format(len(trainingSet+testSet), len(trainingSet), len(testSet)))
             # # prepare model
             summaries = summarizeByClass(trainingSet)
 
@@ -142,7 +142,7 @@ def main(request):
             accuracy = getAccuracy(testSet, predictions)
             result=predict(summaries,inputVector)
             cmatrix=confusionmatrix(testSet,predictions)
-            print(cmatrix)
+           
 
             context={
                         'accuracy':accuracy,'result':result,'title':'result',
@@ -155,16 +155,14 @@ def main(request):
         return render(request,'index/result.html',context)
 
 def model_info(request):
-    splitRatio = 0.67
-    trainingSet=loadCsv('D:/git/heartDisease/index/static/train.csv')
-    testSet=loadCsv('D:/git/heartDisease/index/static/test.csv')
-    print('Split {0} rows into train={1} and test={2} rows'.format(len(trainingSet+testSet), len(trainingSet), len(testSet)))
+    trainingSet=loadCsv('C:/Users/Caran/Desktop/heartDisease/index/static/train.csv')
+    testSet=loadCsv('C:/Users/Caran/Desktop/heartDisease/index/static/test.csv')
     # # prepare model
     summaries = summarizeByClass(trainingSet)
-
     predictions = getPredictions(summaries, testSet)
     accuracy = getAccuracy(testSet, predictions)
-    print(accuracy)
     cmatrix=confusionmatrix(testSet,predictions)
-    print(cmatrix)
-    return render(request,'index/model_info.html',{'title':'model_info','accuracy':accuracy,'cmatrix':cmatrix})
+    return render(request,'index/model_info.html',{'title':'Model Information','accuracy':accuracy,'cmatrix':cmatrix})
+
+def about_us(request):
+    return render(request,'index/about_us.html',{'title':'About Us'})

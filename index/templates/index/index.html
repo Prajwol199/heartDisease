@@ -14,14 +14,14 @@
 	</p>
 	<form action="{% url 'index:form' %}" method="post">
 		{% csrf_token %}
-	<button type="submit" class="btn btn-success btn-lg"><i class="glyphicon glyphicon-thumbs-up"> Continue </i></button>
+	<button type="submit" class="btn btn-danger btn-lg"> Continue </i></button>
 </form>
 </div>
 <div class="index col-md-3 third">
 	Accuracy: 87%<br>
 	Matrix<br>
 	<form method="get" action="{% url 'index:model_info' %}">
-	<button type="submit" class="btn btn-primary">More Detail</button>
+	<button type="submit" class="btn btn-primary">More Details</button>
 	</form>
 </div>
 {%endblock%}

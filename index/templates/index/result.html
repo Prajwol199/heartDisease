@@ -2,22 +2,32 @@
 
 {% block content%}
 {% load staticfiles %}
-
-<div class="index col-md-8 col-lg-offset-2">
+<div class="row clearfix">
+<div class="index col-md-8 col-lg-offset-2 result " >
+	 
 	{% if  result == 1 %}
 	<h3>Sorry! </h4><br>
 	<h5>The system predicts that you may have heart diseases, However the result is not 100% accurate.</h5>
 
-	{% else%}
+	{% else %}
 	<h3>Keep Smiling! The system predicts that you do not have heart diseases.</h3>
 	
 
 	{% endif %}
 
+	<div class="col-xs-10">
 	<canvas id="canvas"></canvas>
-	<a href="{% url 'index:form' %}" class="btn btn-danger">Check Again</a>
+	</div>
+
+	</div>
+	
 </div>
 
+<div class="row">
+	<div class="col-lg-offset-2 graph" >
+	<a href="{% url 'index:form' %}" class="btn btn-danger">Check Again</a>
+</div>
+</div>
 <script type="text/javascript" src="{% static 'bootstrap/js/charts.js'%}"></script>
 <script type="text/javascript" src="{% static 'bootstrap/js/utils.js'%}"></script>
 
